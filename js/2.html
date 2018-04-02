@@ -1,0 +1,30 @@
+<html>
+  <link rel="stylesheet" href=".style/main.css">
+<div id="dvTable">
+  
+  <script src="./js/load_json_1.js"></script>
+ <script>
+ 
+var _data;
+function load()
+{
+   loadJSON('jhar_dis.json', function(response)
+   {
+        //alert(response);
+         _data = JSON.parse(response); //eval('(' +response+')')
+        
+     
+
+
+          });
+
+}
+load();
+
+  </script>
+
+  <script>
+document.write(JSON.stringify(_data.features[1]));
+
+</script>
+</html>
